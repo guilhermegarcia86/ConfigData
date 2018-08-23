@@ -14,6 +14,13 @@ eureka:
 zuul:
   prefix: /api
   ignoredServices: '*'
+  routes:
+    readuser:
+      path: /read/**
+      serviceId: read-user
+    createuser:
+      path: /create/**
+      serviceId: create-user
 security:
   basic:
     enabled: false

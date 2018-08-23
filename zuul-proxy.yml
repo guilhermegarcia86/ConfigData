@@ -11,6 +11,9 @@ eureka:
       defaultZone: http://${eureka.instance.hostname}:${eureka.instance.port}/eureka/
   server:
     wait-time-in-ms-when-sync-empty: 3000
-zull:
+zuul:
   prefix: /api
   ignoredServices: '*'
+security:
+  basic:
+    enabled: false

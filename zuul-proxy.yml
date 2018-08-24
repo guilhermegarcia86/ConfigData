@@ -13,14 +13,7 @@ eureka:
     wait-time-in-ms-when-sync-empty: 3000
 zuul:
   prefix: /api
-  ignoredServices: '*'
-  routes:
-    readuser:
-      path: /read/**
-      serviceId: read-user
-    createuser:
-      path: /create/**
-      serviceId: create-user
+  ignored-services: "*"
 security:
   basic:
     enabled: false

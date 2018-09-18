@@ -4,6 +4,6 @@ spring:
       ddl-auto: create
     show-sql: true
   datasource:
-    url: jdbc:mysql://localhost:3306/aplicacao
+    url: jdbc:mysql://localhost:3306/escoladb
     username: root
     password: 1234

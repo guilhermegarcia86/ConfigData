@@ -4,3 +4,5 @@ eureka:
   client:
     serviceUrl:
       defaultZone: http://localhost:9091/eureka/
+zuul:
+  prefix: /api

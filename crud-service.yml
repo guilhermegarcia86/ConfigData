@@ -1,11 +1,18 @@
 server:
-  port: 8000
+  port: 9090
+
+spring:
+  jpa:
+    hibernate:
+      ddl-auto: validate
+      format_sql: true
+    show-sql: true
+  datasource:
+    url: jdbc:mysql://localhost:3306/escoladb?useSSL=false
+    username: root
+    password: 1234
 
 eureka:
   client:
-    registerWithEureka: true
-    fetchRegistry: false
     serviceUrl:
       defaultZone: http://localhost:8761/eureka
-  server:
-    wait-time-in-ms-when-sync-empty: 3000

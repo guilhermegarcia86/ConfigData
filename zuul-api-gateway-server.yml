@@ -9,4 +9,6 @@ zuul:
   prefix: /api
   ignoredServices: '*'
   routes:
-    rota: /message/hello
+    rota:
+      path: /message/hello
+      serviceId: hello-word

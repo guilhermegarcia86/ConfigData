@@ -4,5 +4,9 @@ eureka:
   client:
     serviceUrl:
       defaultZone: http://localhost:8761/eureka
+
 zuul:
   prefix: /api
+  ignoredServices: '*'
+  routes:
+    rota: /message/hello

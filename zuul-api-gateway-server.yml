@@ -1,14 +1,21 @@
 server:
-  port: 8765
+  port: 8700
+
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://localhost:8761/eureka
+      defaultZone: http://localhost:8762/eureka
 
 zuul:
   prefix: /api
-  ignoredServices: '*'
   routes:
-    rota:
-      path: /message/hello
-      serviceId: hello-word
+    test:
+      path: /redirect/**
+      url: http://google.com
+    file:
+      path: /documents/file/*
+      url: http://localhost:8500/file
+    upload:
+      path: /documents/upload/*
+      url: http://localhost:8200/comunicado/upload
+      
